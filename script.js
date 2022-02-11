@@ -1,25 +1,41 @@
 // remove animated-logo after 4.5 seconds
-setTimeout(() =>{
-element = document.getElementById('animated-logo');
-element.remove();},4300);
+setTimeout(() => {
+  element = document.getElementById("animated-logo");
+  element.remove();
+}, 4300);
 
+// nav-bar li's moved to burger icon
+const burger = document.getElementById("burger");
+const navUL = document.getElementById("nav_list");
+const navButton = document.getElementById("nav_listitem_button");
 
-const boxes = document.querySelectorAll('.doctor-1, .doctor-2')
+burger.addEventListener("click", () => {
+  navUL.classList.toggle("show");
+});
 
-window.addEventListener('scroll', checkBoxes)
+burger.addEventListener("click", () => {
+  navButton.classList.toggle("show");
+});
 
-checkBoxes() 
+// doctors section
+const boxes = document.querySelectorAll(".doctor-1, .doctor-2");
+
+window.addEventListener("scroll", checkBoxes);
+
+checkBoxes();
 
 function checkBoxes() {
-     const triggerBottom = window.innerHeight / 5 * 4
+  const triggerBottom = (window.innerHeight / 5) * 4;
 
-    boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
 
-        if(boxTop < triggerBottom) {
-            box.classList.add('show')
-        } else {
-            box.classList.remove('show')
-        }
-    })
+    if (boxTop < triggerBottom) {
+      box.classList.add("show");
+    } else {
+      box.classList.remove("show");
+    }
+  });
 }
+
+

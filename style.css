@@ -261,27 +261,6 @@ p {
   padding-bottom: 20rem;
 }
 
-.custom-shape-divider-bottom-1639889983 {
-  position: absolute;
-  bottom: -27.5vh;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1639889983 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 123px;
-}
-
-.custom-shape-divider-bottom-1639889983 .shape-fill {
-  fill: rgb(35, 64, 65);
-}
-
 /* styling navigation bar (Start)*/
 
 .header-contact-info {

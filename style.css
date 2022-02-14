@@ -468,6 +468,7 @@ button:hover {
 .servicios {
   display: flex;
   max-width: 100%;
+  justify-content: center;
 
   padding: 15rem 18rem 20rem 18rem;
   background-image: linear-gradient(

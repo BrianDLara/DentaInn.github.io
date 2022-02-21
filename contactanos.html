@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="contactanos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>CONTÀCTANOS</title>
+    <title>Contactanos</title>
 </head>
+
 <body>
     <div class="hero">
-         <!-- Navigation bar and logo -->
+        <!-- Navigation bar and logo -->
+        <span class="header-contact-info">  <a href="tel:562-972-6716">Tel: 56-2972-6716</a>&emsp;&emsp;&emsp;<a href="mailto:dentalinnjl@gmail.com">E-mail: dentalinnjl@gmail.com</a> </span>
         <header>
-            <img src="images/transparent_logo.png" alt="image of logo" class="nav-logo">
-            <nav class="navbar">               
-                <ul class="nav-links">
-                    <li class="nav-li"><a href="#" class="nav-a">SERVICIOS</a></li>
-                    <li class="nav-li"><a href="#" class="nav-a">DOCTORES</a></li>
-                    <li class="nav-li"><a href="contactanos.html" class="nav-a">CONTÀCTANOS</a></li>                  
-                </ul>
-            </nav>
-            <a class="cta" href="#"><button>AS UNA VISITA 24/7</button></a>
-        </header>
-
-        <form action="https://formsubmit.co/dentalinnjl@gmail.com" method="POST">
-            <div class="row">
-                <div class="input-group">
-                    <input type="text" id="nombre" name="nombre" required>
-                    <label for="nombre" placeholder="Nombre"><i class="fas fa-user"></i> Nombre</label>
+            <img class="nav-logo" src="images/transparent_logo.png"  alt="image of logo">
+            <nav class="nav">   
+               <button class="burger" id="burger">
+                   <i class="fas fa-bars"></i>
+               </button>            
+               <ul class="nav_list" id="nav_list">
+                   <li class="nav_listitem"><a href="index.html" class="nav-a">HOME</a></li>
+                   
+                   <li class="nav_listitem"><a href="#servicios" class="nav-a">SERVICIOS</a>
+                      <ul class="nav_list_item_drop">
+                       <li class="sub_list"><a href=""#>PREVENCIÓN</a></li>
+                       <li class="sub_list"><a href=""#>RESTAURACION</a></li>
+                       <li class="sub_list"><a href=""#>REHABILITACIÓN</a></li>
+                       <li class="sub_list"><a href=""#>CIRUGÍA</a></li>
+                      </ul>
+                   </li>
+                   <li class="nav_listitem"><a href="index.html#doctores" class="nav-a">DOCTORES</a></li>
+                   
+                   <li class="nav_listitem"><a href="contactanos.html" class="nav-a">CONTÀCTANOS</a></li>  
+                   
+                   <li id="nav_listitem_btn">  <a class="nav_listitem_btn" href="https://calendly.com/dentalinnjl/cita">
+                       <button>AS UNA VISITA 24/7</button></a>
+                   </li>                
+               </ul>
+           </nav>
+          
+       </header>
+        <div class="form-box">
+            <form action="https://formsubmit.co/briandlara1@gmail.com" method="POST">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="nombre" placeholder="Nombre"><i class="fas fa-user"></i> Nombre</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="numero" name="telefono" required>
+                        <label for="numero"><i class="fas fa-mobile-alt"></i> Numero De Tel.</label>
+                    </div>
                 </div>
+                
                 <div class="input-group">
-                    <input type="text" id="numero" name="telefono" required>
-                    <label for="numero"><i class="fas fa-mobile-alt"></i> Numero De Tel.</label>
+                    <input type="text" id="email" name="email" required>
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
                 </div>
-            </div>
             
-            <div class="input-group">
-                <input type="text" id="email" name="email" required>
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-            </div>
-           
-            <div class="input-group">
-                <textarea id="mensage" rows="13" name="mensage"></textarea>
-                <label for="mensage"><i class="fas fa-comments"></i> Mensage</label>
-            </div>
-           
-            <button class="submit-button"type="submit">ENTREGAR </button>
-    
-        </form>
+                <div class="input-group">
+                    <textarea id="mensage" rows="13" name="mensage"></textarea>
+                    <label for="mensage"><i class="fas fa-comments"></i> Mensage</label>
+                </div>
+            
+                <button class="submit-button"type="submit" name="submit">ENTREGAR </button>
+        
+            </form>
+        </div>
     </div>
     
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="script.js"></script>
+
+    <script src="//code.tidio.co/5levsluzr3mftzzmpdljsqutqadjawai.js" async></script>
 </body>
 </html>

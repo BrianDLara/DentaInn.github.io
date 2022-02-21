@@ -10,8 +10,15 @@ html {
   height: 100%;
   margin: auto;
   overflow-y: scroll;
-  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
 }
 
 html::-webkit-scrollbar {
@@ -245,7 +252,7 @@ p {
 .icon-animation * {
   position: absolute;
 }
-/* hero image of work space */
+/* hero image of body*/
 .hero {
   width: 100%;
   height: auto;
@@ -274,13 +281,14 @@ p {
 
 .header-contact-info a {
   color: white;
+  z-index: 100;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 7vh;
   width: 100%;
 }
 
@@ -356,7 +364,7 @@ header {
 
 .nav_listitem a {
   text-decoration: none;
-  color: #3a7d7e;
+  color: #68bebf;
 }
 
 .sub_list:hover {
@@ -369,8 +377,14 @@ a:hover {
 }
 
 .nav-logo {
+  position: relative;
   height: 15vh;
   margin: 0 1rem;
+  cursor: pointer;
+}
+
+a .nav-logo {
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -578,7 +592,12 @@ iframe {
 }
 /* --Footer content (end)-- */
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
+  html,
+  body {
+    position: relative !important;
+  }
+
   .nav_list {
     display: flex;
     flex-direction: column;
